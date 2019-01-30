@@ -1,0 +1,7 @@
+C:\Luann\Projetos\LPW\Projetos\Exercicio4\Exercicio4\bin\Debug\Exercicio4.exe.config
+C:\Luann\Projetos\Exercicio4\Exercicio4\bin\Debug\Exercicio4.exe.config
+C:\Luann\Projetos\Exercicio4\Exercicio4\obj\Debug\Exercicio4.csprojResolveAssemblyReference.cache
+C:\Luann\Projetos\Exercicio4\Exercicio4\bin\Debug\Exercicio4.exe
+C:\Luann\Projetos\Exercicio4\Exercicio4\bin\Debug\Exercicio4.pdb
+C:\Luann\Projetos\Exercicio4\Exercicio4\obj\Debug\Exercicio4.exe
+C:\Luann\Projetos\Exercicio4\Exercicio4\obj\Debug\Exercicio4.pdb

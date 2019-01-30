@@ -1,0 +1,6 @@
+C:\Luann\Projetos\Exercicio5\Exercicio5\bin\Debug\Exercicio5.exe.config
+C:\Luann\Projetos\Exercicio5\Exercicio5\obj\Debug\Exercicio5.csprojResolveAssemblyReference.cache
+C:\Luann\Projetos\Exercicio5\Exercicio5\bin\Debug\Exercicio5.exe
+C:\Luann\Projetos\Exercicio5\Exercicio5\bin\Debug\Exercicio5.pdb
+C:\Luann\Projetos\Exercicio5\Exercicio5\obj\Debug\Exercicio5.exe
+C:\Luann\Projetos\Exercicio5\Exercicio5\obj\Debug\Exercicio5.pdb
