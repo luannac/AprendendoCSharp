@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Luann_R09
 {
+    /*R.9 
+    – Usando a estrutura de dados denominada Vetor, faça um programa que leia vinte números inteiros e positivos,
+        e armazene-os em um vetor. O programa deverá ordenar os valores lidos no vetor em ordem crescente e decrescente.
+        Apresentar na tela do usuário, o vetor lido originalmente, o vetor ordenado de forma crescente e o vetor ordenado de forma decrescente.
+        Obs: O programa não deverá aceitar valores de “entrada” negativos ou iguais a 0 (zero),
+        portanto, o programa deverá testar todos os valores de “entrada”.*/
     class Program
     {
         private static int[,] numeros = new int[3, 20];
@@ -46,14 +52,27 @@ namespace Luann_R09
         private static void ordenaCres(int idVetor)
         {
             int auxiliar = 0;
-            for(int i = 1; i < 19; i++)
+            /*for (int i = 0; i < 19 ; i++)
             {
-                for (int j = i; j < 20; j++)
+                for (int j = 0; j > 20; j++)
                 {
-                    if (numeros[idVetor, j - 1] > numeros[idVetor, j]) {
-                        auxiliar = numeros[idVetor, j - 1];
-                        numeros[idVetor, j - 1] = numeros[idVetor, j];
+                    if (numeros[idVetor, j + 1] > numeros[idVetor, j]) {
+                        auxiliar = numeros[idVetor, j + 1];
+                        numeros[idVetor, j + 1] = numeros[idVetor, j];
                         numeros[idVetor, j] = auxiliar;
+                    }
+                }
+            }*/
+            
+            for (int i = 0; i < 20 - 1; i++)
+            {
+                for (int j = 0; j < 20 - (i + 1); j++)
+                {
+                    if (numeros[idVetor,j] > numeros[idVetor,j + 1])
+                    {
+                        auxiliar = numeros[idVetor,j];
+                        numeros[idVetor,j] = numeros[idVetor,j + 1];
+                        numeros[idVetor,j + 1] = auxiliar;
                     }
                 }
             }
@@ -61,15 +80,27 @@ namespace Luann_R09
         private static void ordenaDesc(int idVetor)
         {
             int auxiliar = 0;
-            for (int i = 1; i < 19; i++)
+            /*for (int i = 0; i < 19; i++)
             {
-                for (int j = i; j < 20; j++)
+                for (int j = 0; j > 20 - (i + 1); j++)
                 {
-                    if (numeros[idVetor, j - 1] < numeros[idVetor, j])
+                    if (numeros[idVetor, j + 1] < numeros[idVetor, j])
                     {
-                        auxiliar = numeros[idVetor, j - 1];
-                        numeros[idVetor, j - 1] = numeros[idVetor, j];
+                        auxiliar = numeros[idVetor, j + 1];
+                        numeros[idVetor, j + 1] = numeros[idVetor, j];
                         numeros[idVetor, j] = auxiliar;
+                    }
+                }
+            }*/
+            for (int i = 0; i < 20 - 1; i++)
+            {
+                for (int j = 0; j < 20 - (i + 1); j++)
+                {
+                    if (numeros[idVetor, j] > numeros[idVetor, j + 1])
+                    {
+                        auxiliar = numeros[idVetor, j];
+                        numeros[idVetor, j] = numeros[idVetor, j + 1];
+                        numeros[idVetor, j + 1] = auxiliar;
                     }
                 }
             }
