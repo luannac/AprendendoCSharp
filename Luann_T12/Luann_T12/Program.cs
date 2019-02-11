@@ -4,25 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Luann_T11
+namespace Luann_T12
 {
-    /*T.11 
-    – Usando a estrutura de dados denominada Matriz, faça um programa que leia valores inteiros e positivos para uma matriz de ordem cinco.
-        O programa deverá calcular e presentar na tela do usuário, a somatória, a média aritmética dos valores abaixo da Diagonal Principal da matriz.
-        Obs: O programa não deverá aceitar valores de “entrada” negativos ou iguais a 0 (zero),
-        portanto, o programa deverá testar todos os valores de “entrada”.*/
     class Program
     {
+        /*T.12 
+        –Usando a estrutura de dados denominada Matriz, faça um programa que leia valores inteiros e positivos para uma matriz de ordem seis.
+            O programa deverá calcular e presentar na tela do usuário, a somatória, a média aritmética e os valores lidos na Diagonal Secundária da matriz.
+            Obs:O programa nãodeverá aceitar valores de “entrada”negativosou iguais a 0(zero), portanto, o programa deverá testartodos os valores de “entrada”. */
         private static int[,] matriz;
         static void Main(string[] args)
         {
-            matriz = new int[5,5];
+            matriz = new int[6, 6];
 
             Console.WriteLine("Matriz de valores!\n___________________________________");
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 6; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < 6; j++)
                 {
                     recebe(i, j);
                 }
@@ -42,11 +41,12 @@ namespace Luann_T11
         {
             ArrayList valoresDiag = new ArrayList();
             int somador = 0;
-            for (int i = 0; i < 5; i++)
+            int contador = 5;
+            for (int i = 0; i < 6; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < 6; j++)
                 {
-                    if (i > j)
+                    if (j==contador)
                     {
                         valoresDiag.Add(matriz[i, j]);
                         somador += matriz[i, j];
@@ -54,6 +54,7 @@ namespace Luann_T11
                     Console.Write("[{0}] ", matriz[i, j]);
                 }
                 Console.WriteLine();
+                contador--;
             }
             Console.WriteLine("\n\nOs valores são: ");
             foreach (int valor in valoresDiag)
