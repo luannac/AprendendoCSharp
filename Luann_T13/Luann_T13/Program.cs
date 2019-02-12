@@ -14,7 +14,6 @@ namespace Luann_T13
     class Program
     {
         private static int[,] matriz,matrizCre;
-        private static ArrayList lista = new ArrayList();
 
         static void Main(string[] args)
         {
@@ -30,6 +29,7 @@ namespace Luann_T13
                     recebe(i, j);
                 }
             }
+            ordenar();
             mostra();
             Console.ReadKey();
         }
@@ -43,6 +43,7 @@ namespace Luann_T13
         }
         private static void ordenar()
         {
+            ArrayList lista = new ArrayList();
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 5; j++)
@@ -51,17 +52,35 @@ namespace Luann_T13
                 }
             }
             lista.Sort();
+            int x = 0;
 
+            for(int i =0; i < 3; i++)
+            {
+                for(int j = 0; j < 5; j++)
+                {
+                    matrizCre[i, j] = (int) lista[x];
+                    x++;
+                }
+            }
 
             
         }
         private static void mostra()
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
                     Console.Write("[{0}] ", matriz[i, j]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write("[{0}] ", matrizCre[i, j]);
                 }
                 Console.WriteLine();
             }
