@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Luann_v09
+namespace Luann_V11
 {
-    /*V.9 
+    /*.11 
     – Usando a estrutura de dados denominada Matriz, faça um programa que leia valores inteiros
-        e positivos para uma matriz de ordem seis. O programa deverá calcular e presentar na tela do usuário,
-        a somatória, a média aritmética e os valores lidos na Diagonal Principal da matriz.  
+        e positivos para uma matriz de ordem cinco. O programa deverá calcular e presentar na tela do usuário,
+        a somatória, a média aritmética dos valores abaixo da Diagonal Principal da matriz.  
         Obs: O programa não deverá aceitar valores de “entrada” negativos ou iguais a 0 (zero),
-        portanto, o programa deverá testar todos os valores de “entrada”.   */
+        portanto, o programa deverá testar todos os valores de “entrada”*/
     class Program
     {
         private static int somador;
-        private static int quant = 6;
+        private static int quant = 5;
         private static int[,] matriz = new int[quant, quant];
         static void Main(string[] args)
         {
@@ -39,7 +39,7 @@ namespace Luann_v09
             {
                 while (j < quant)
                 {
-                    Console.Write("[{0}]",matriz[i, j]);
+                    Console.Write("[{0}]", matriz[i, j]);
                     j++;
                 }
                 Console.WriteLine();
@@ -82,7 +82,7 @@ namespace Luann_v09
                         ymenor = i + 1;
                         xmenor = j + 1;
                     }
-                    if (i == j)
+                    if (i < j)
                     {
                         lista.Add((int)matriz[i, j]);
                     }
@@ -92,15 +92,15 @@ namespace Luann_v09
                 j = 0;
             }
             Console.WriteLine();
+            int media = soma / (quant * quant);
+            Console.WriteLine(string.Format("A média é: {0}\nA soma é: {1}\nO maior é: {2} e esta no x:{3} y:{4}\nO menor é:{5} e está no x:{6} y:{7}\n", media, soma, maior, xmaior, ymaior, menor, xmenor, ymenor));
+            Console.WriteLine();
             i = 0;
             while (i < lista.Count)
             {
-                Console.Write("[{0}]",lista[i]);
+                Console.Write("[{0}]", lista[i]);
                 i++;
             }
-            Console.WriteLine();
-            int media = soma / (quant * quant);
-            Console.WriteLine(string.Format("A média é: {0}\nA soma é: {1}\nO maior é: {2} e esta no x:{3} y:{4}\nO menor é:{5} e está no x:{6} y:{7}\n", media, soma, maior, xmaior, ymaior, menor, xmenor, ymenor));
             Console.WriteLine("\n\n");
         }
     }
