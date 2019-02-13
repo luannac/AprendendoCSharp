@@ -17,29 +17,36 @@ namespace Calculadora
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)//Botao -
+        private void btnSubtrair_Click(object sender, EventArgs e)//Botao -
         {
-            double resultado = Convert.ToDouble(textBox1) - Convert.ToDouble(textBox2.Text);
-            textBox3.Text = resultado.ToString() ;
+            double resultado = Convert.ToDouble(txtValor1.Text) - Convert.ToDouble(txtValor2.Text);
+            txtResultado.Text = resultado.ToString() ;
 
         }
 
-        private void button2_Click(object sender, EventArgs e)//Botao *
+        private void btnMultiplicar_Click(object sender, EventArgs e)//Botao *
         {
-            double resultado = Convert.ToDouble(textBox1) * Convert.ToDouble(textBox2.Text);
-            textBox3.Text = resultado.ToString();
+            double resultado = Convert.ToDouble(txtValor1.Text) * Convert.ToDouble(txtValor2.Text);
+            txtResultado.Text = resultado.ToString();
         }
 
-        private void button4_Click(object sender, EventArgs e)//Botao /
+        private void btnDividir_Click(object sender, EventArgs e)//Botao /
         {
-            double resultado = Convert.ToDouble(textBox1) / Convert.ToDouble(textBox2.Text);
-            textBox3.Text = resultado.ToString();
+            double resultado = Convert.ToDouble(txtValor1.Text) / Convert.ToDouble(txtValor2.Text);
+            txtResultado.Text = resultado.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)//Botao +
+        private void btnSomar_Click(object sender, EventArgs e)//Botao +
         {
-            double resultado = Convert.ToDouble(textBox1) + Convert.ToDouble(textBox2.Text);
-            textBox3.Text = resultado.ToString();
+            double resultado = Convert.ToDouble(txtValor1.Text) + Convert.ToDouble(txtValor2.Text);
+            txtResultado.Text = resultado.ToString();
+        }
+
+        private void lblTitulo_Paint(object sender, PaintEventArgs e)
+        {
+            Pen pen = new Pen(Color.Black);
+            //e.Graphics.DrawLine(pen, 20, 10, 300, 100);
+            e.Graphics.DrawRectangle(pen,0,90,300,15);
         }
     }
 }
