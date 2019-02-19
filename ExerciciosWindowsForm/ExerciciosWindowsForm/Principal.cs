@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ExerciciosWindowsForm
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
         }
@@ -32,23 +32,22 @@ namespace ExerciciosWindowsForm
             formulario.Show();
         }
 
-        private void mitH02_Click(object sender, EventArgs e)
-        {
-            H02 formulario = new H02();
-            formulario.Text = "Exercicio H - 02";
-            formulario.Show();
-        }
-
-        private void mitH04_Click(object sender, EventArgs e)
-        {
-            H04 formulario = new H04();
-            formulario.Text = "Exercicio H - 04";
-            formulario.Show();
-        }
-
         private void mitSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void t11ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            T11 frame = new T11();
+            frame.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            T13 frame = new T13();
+            frame.Show();
+
         }
     }
 }
