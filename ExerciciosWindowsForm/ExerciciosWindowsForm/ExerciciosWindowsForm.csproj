@@ -52,6 +52,18 @@
     <Compile Include="F01.Designer.cs">
       <DependentUpon>F01.cs</DependentUpon>
     </Compile>
+    <Compile Include="F04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F04.Designer.cs">
+      <DependentUpon>F04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,14 +90,50 @@
     <Compile Include="T11.Designer.cs">
       <DependentUpon>T11.cs</DependentUpon>
     </Compile>
+    <Compile Include="T12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T12.Designer.cs">
+      <DependentUpon>T12.cs</DependentUpon>
+    </Compile>
     <Compile Include="T13.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="T13.Designer.cs">
       <DependentUpon>T13.cs</DependentUpon>
     </Compile>
+    <Compile Include="V11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V11.Designer.cs">
+      <DependentUpon>V11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="X09.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="X09.Designer.cs">
+      <DependentUpon>X09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="X10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="X10.Designer.cs">
+      <DependentUpon>X10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="X11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="X11.Designer.cs">
+      <DependentUpon>X11.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="F01.resx">
       <DependentUpon>F01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F04.resx">
+      <DependentUpon>F04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -109,8 +157,23 @@
     <EmbeddedResource Include="T11.resx">
       <DependentUpon>T11.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="T12.resx">
+      <DependentUpon>T12.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="T13.resx">
       <DependentUpon>T13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V11.resx">
+      <DependentUpon>V11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="X09.resx">
+      <DependentUpon>X09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="X10.resx">
+      <DependentUpon>X10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="X11.resx">
+      <DependentUpon>X11.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

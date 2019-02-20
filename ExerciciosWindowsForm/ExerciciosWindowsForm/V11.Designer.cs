@@ -1,6 +1,6 @@
 ﻿namespace ExerciciosWindowsForm
 {
-    partial class T11
+    partial class V11
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgTable = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V11));
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.dgvTabela = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lTitle = new System.Windows.Forms.Label();
-            this.lValor = new System.Windows.Forms.Label();
             this.txValor = new System.Windows.Forms.TextBox();
+            this.lValor = new System.Windows.Forms.Label();
             this.bAdicionar = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.bRelatorio = new System.Windows.Forms.Button();
-            this.tResposta = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgTable)).BeginInit();
+            this.rtbResposta = new System.Windows.Forms.RichTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgTable
+            // richTextBox1
             // 
-            this.dgTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTable.ColumnHeadersVisible = false;
-            this.dgTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(13, 13);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox1.Size = new System.Drawing.Size(395, 100);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // dgvTabela
+            // 
+            this.dgvTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabela.ColumnHeadersVisible = false;
+            this.dgvTabela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgTable.Location = new System.Drawing.Point(36, 50);
-            this.dgTable.Name = "dgTable";
-            this.dgTable.RowHeadersVisible = false;
-            this.dgTable.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgTable.Size = new System.Drawing.Size(153, 116);
-            this.dgTable.TabIndex = 0;
+            this.dgvTabela.Location = new System.Drawing.Point(13, 151);
+            this.dgvTabela.Name = "dgvTabela";
+            this.dgvTabela.RowHeadersVisible = false;
+            this.dgvTabela.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvTabela.Size = new System.Drawing.Size(153, 109);
+            this.dgvTabela.TabIndex = 1;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "1";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column1.Width = 30;
             // 
             // Column2
@@ -97,35 +108,26 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 30;
             // 
-            // lTitle
+            // txValor
             // 
-            this.lTitle.AutoSize = true;
-            this.lTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitle.Location = new System.Drawing.Point(45, 13);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(221, 22);
-            this.lTitle.TabIndex = 1;
-            this.lTitle.Text = "Tabela de Valores (Matriz)";
+            this.txValor.Location = new System.Drawing.Point(250, 151);
+            this.txValor.Name = "txValor";
+            this.txValor.Size = new System.Drawing.Size(100, 20);
+            this.txValor.TabIndex = 2;
+            this.txValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txValor_KeyPress);
             // 
             // lValor
             // 
             this.lValor.AutoSize = true;
-            this.lValor.Location = new System.Drawing.Point(209, 59);
+            this.lValor.Location = new System.Drawing.Point(199, 151);
             this.lValor.Name = "lValor";
-            this.lValor.Size = new System.Drawing.Size(31, 13);
-            this.lValor.TabIndex = 2;
-            this.lValor.Text = "Valor";
-            // 
-            // txValor
-            // 
-            this.txValor.Location = new System.Drawing.Point(250, 59);
-            this.txValor.Name = "txValor";
-            this.txValor.Size = new System.Drawing.Size(100, 20);
-            this.txValor.TabIndex = 3;
+            this.lValor.Size = new System.Drawing.Size(34, 13);
+            this.lValor.TabIndex = 3;
+            this.lValor.Text = "Valor:";
             // 
             // bAdicionar
             // 
-            this.bAdicionar.Location = new System.Drawing.Point(233, 85);
+            this.bAdicionar.Location = new System.Drawing.Point(228, 201);
             this.bAdicionar.Name = "bAdicionar";
             this.bAdicionar.Size = new System.Drawing.Size(75, 23);
             this.bAdicionar.TabIndex = 4;
@@ -135,39 +137,39 @@
             // 
             // bRelatorio
             // 
-            this.bRelatorio.Location = new System.Drawing.Point(233, 159);
+            this.bRelatorio.Location = new System.Drawing.Point(214, 247);
             this.bRelatorio.Name = "bRelatorio";
-            this.bRelatorio.Size = new System.Drawing.Size(107, 23);
+            this.bRelatorio.Size = new System.Drawing.Size(89, 23);
             this.bRelatorio.TabIndex = 5;
             this.bRelatorio.Text = "Gerar Relatório";
             this.bRelatorio.UseVisualStyleBackColor = true;
             this.bRelatorio.Click += new System.EventHandler(this.bRelatorio_Click);
             // 
-            // tResposta
+            // rtbResposta
             // 
-            this.tResposta.BackColor = System.Drawing.SystemColors.Menu;
-            this.tResposta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tResposta.Location = new System.Drawing.Point(45, 239);
-            this.tResposta.Name = "tResposta";
-            this.tResposta.Size = new System.Drawing.Size(295, 176);
-            this.tResposta.TabIndex = 6;
-            this.tResposta.Text = "";
+            this.rtbResposta.BackColor = System.Drawing.SystemColors.Menu;
+            this.rtbResposta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbResposta.Location = new System.Drawing.Point(13, 303);
+            this.rtbResposta.Name = "rtbResposta";
+            this.rtbResposta.Size = new System.Drawing.Size(395, 96);
+            this.rtbResposta.TabIndex = 6;
+            this.rtbResposta.Text = "";
             // 
-            // T11
+            // V11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 560);
-            this.Controls.Add(this.tResposta);
+            this.ClientSize = new System.Drawing.Size(424, 422);
+            this.Controls.Add(this.rtbResposta);
             this.Controls.Add(this.bRelatorio);
             this.Controls.Add(this.bAdicionar);
-            this.Controls.Add(this.txValor);
             this.Controls.Add(this.lValor);
-            this.Controls.Add(this.lTitle);
-            this.Controls.Add(this.dgTable);
-            this.Name = "T11";
-            this.Text = "T11";
-            ((System.ComponentModel.ISupportInitialize)(this.dgTable)).EndInit();
+            this.Controls.Add(this.txValor);
+            this.Controls.Add(this.dgvTabela);
+            this.Controls.Add(this.richTextBox1);
+            this.Name = "V11";
+            this.Text = "V11";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,18 +177,17 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgTable;
-        private System.Windows.Forms.Label lTitle;
-        private System.Windows.Forms.Label lValor;
-        private System.Windows.Forms.TextBox txValor;
-        private System.Windows.Forms.Button bAdicionar;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DataGridView dgvTabela;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox txValor;
+        private System.Windows.Forms.Label lValor;
+        private System.Windows.Forms.Button bAdicionar;
         private System.Windows.Forms.Button bRelatorio;
-        private System.Windows.Forms.RichTextBox tResposta;
+        private System.Windows.Forms.RichTextBox rtbResposta;
     }
 }

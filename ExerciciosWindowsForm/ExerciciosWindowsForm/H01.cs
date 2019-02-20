@@ -44,7 +44,7 @@ namespace ExerciciosWindowsForm
 
             int asc = (int)e.KeyChar;
 
-            if (!char.IsDigit(e.KeyChar) && asc != 08 && asc != 127)
+            if (!char.IsDigit(e.KeyChar) && asc != 08 && asc != 127 && asc!= 193)
             {
 
                 e.Handled = true;

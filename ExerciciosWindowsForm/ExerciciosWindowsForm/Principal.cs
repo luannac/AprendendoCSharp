@@ -1,4 +1,6 @@
-﻿using System;
+﻿using F4;
+using T12;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,7 +49,48 @@ namespace ExerciciosWindowsForm
         {
             T13 frame = new T13();
             frame.Show();
+        }
 
+        private void f04ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F04 frame = new F04();
+            frame.Show();
+        }
+
+        private void t12ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            T12.T12 frame = new T12.T12();
+            frame.Show();
+        }
+
+        private void x09ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            X9.Form1 frame = new X9.Form1();
+            frame.Show();
+            
+        }
+
+        private void x10ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            X10.Form1 frame = new X10.Form1();
+            frame.Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void v11ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            V11 frame = new V11();
+            frame.Show();
+        }
+
+        private void x11ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            X11 frame = new X11();
+            frame.Show();
         }
     }
 }
