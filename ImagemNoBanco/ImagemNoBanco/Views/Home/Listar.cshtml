@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<string>
+
+<h2>Listar</h2>
+
+@{ 
+    var pos = 1;
+}
+
+@foreach (var item in Model)
+{
+    string img64Url = string.Format("data:image/jpeg;base64,{0}", item);
+    <label>@pos</label>
+    <br />
+    <img src="@img64Url" />
+    <br />
+    pos++;
+}
+

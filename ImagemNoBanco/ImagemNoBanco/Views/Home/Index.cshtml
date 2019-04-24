@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Indice</h2>
+
+<form action="~/Home/Salvar" method="post" enctype="multipart/form-data" runat="server">
+    <input type="text" name="Desc" />
+    <input type="file" name="Imagem" id="img" runat="server" />
+    <input type="submit" value="salvar" />
+</form>
+

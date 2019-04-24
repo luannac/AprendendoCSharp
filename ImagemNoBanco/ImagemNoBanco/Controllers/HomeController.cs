@@ -12,6 +12,8 @@ namespace ImagemNoBanco.Controllers
 {
     public class HomeController : Controller
     {
+        private string serverAdress = "Server=ESN509VMSSQL;Database=2019_3it_LuannCampos;User id=Aluno;Password=Senai1234";
+
         // GET: Home
         public ActionResult Index()
         {
@@ -22,7 +24,7 @@ namespace ImagemNoBanco.Controllers
         {
             List<string> lista = new List<string>();
             //Save on Database
-            SqlConnection con = new SqlConnection("Server=ESN509VMSSQL;Database=2019_3it_LuannCampos;User id=Aluno;Password=Senai1234");
+            SqlConnection con = new SqlConnection(serverAdress);
 
             con.Open();
             SqlCommand query =
@@ -31,7 +33,7 @@ namespace ImagemNoBanco.Controllers
             SqlDataReader leitor = query.ExecuteReader();
             while (leitor.Read())
             {
-                byte[] b = (byte[])leitor["image"];
+                byte[] b = (byte[])leitor["imagem"];
                 lista.Add(Convert.ToBase64String(b));
             }
             con.Close();
@@ -55,16 +57,24 @@ namespace ImagemNoBanco.Controllers
                     postedFile.InputStream.Read(imageBytes, 0, fileLength);
 
                     //saves on Database
-                    SqlConnection
+                    SqlConnection con = new SqlConnection(serverAdress);
+
+                    con.Open();
+                    SqlCommand query = new SqlCommand("INSERT INTO img(imagem) VALUES(@img);", con);
+
+                    query.Parameters.AddWithValue("@img", imageBytes);
+                    query.ExecuteNonQuery();
+                    con.Close();
+
+                    //postedFile.SaveAs(@"c:Fernando\"+Request.Form())
+
+                }
+                else
+                {
+                    postedFile.SaveAs(@"c:\Fernando\" + Request.Form["Desc"] + ".txt");
                 }
             }
-        }
-    }
-    public static class Conecta : SqlConnection
-    {
-        public Conecta() :base("Server=ESN509VMSSQL;Database=2019_3it_LuannCampos;User id=Aluno;Password=Senai1234")
-        {
-           
+            return RedirectToAction("Index");
         }
     }
 }
