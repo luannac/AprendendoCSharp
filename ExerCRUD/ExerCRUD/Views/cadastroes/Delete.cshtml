@@ -1,0 +1,192 @@
+﻿@model ExerCRUD.Models.cadastro
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>cadastro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomePai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomePai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomeMae)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomeMae)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nacionalidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nacionalidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.naturalidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.naturalidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estadoCivil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoCivil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.grauInstrucao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.grauInstrucao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cedulaIdentidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cedulaIdentidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carteiraProfissional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carteiraProfissional)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carteiraReservista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carteiraReservista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tituloEleitor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tituloEleitor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carteiraHabilitacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carteiraHabilitacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpf)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

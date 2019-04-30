@@ -1,0 +1,153 @@
+﻿@model IEnumerable<ExerCRUD.Models.cadastro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bairro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomePai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeMae)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nacionalidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.naturalidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estadoCivil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.grauInstrucao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cedulaIdentidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carteiraProfissional)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carteiraReservista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tituloEleitor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carteiraHabilitacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cpf)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.foto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomePai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomeMae)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nacionalidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.naturalidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estadoCivil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.grauInstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cedulaIdentidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carteiraProfissional)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carteiraReservista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tituloEleitor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carteiraHabilitacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cpf)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
